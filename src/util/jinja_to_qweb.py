@@ -277,8 +277,6 @@ def upgrade_jinja_fields(
     table_model_name="model",
     fetch_model_name=False,
 ):
-    _logger.info("skip upgrade jinja fields for table %s", table_name)
-    return
     _validate_table(table_name)
     all_field = inline_template_fields + qweb_fields
     if not model_name:
